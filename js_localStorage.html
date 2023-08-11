@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Local Storage</title>
+</head>
+
+<body id="bb" style="background-color: crimson;">
+    <div id="d1">
+        <button onclick="setData()">set data</button>
+    </div>
+    <div id="d2">
+        <button onclick="getData()">get data</button>
+    </div>
+    <div id="d3">
+        <button onclick="setColor()">set color</button>
+        <input id="a1" type="color">
+    </div>
+    <div id="d4">
+        <button onclick="storeText()">store text</button>
+        <textarea id="t1"></textarea>
+    </div>
+    <div id="d5">
+        <button onclick="resetData()">reset data</button>
+    </div>
+    <script>
+        //user press on button - save my name to local storage
+        function setData() {
+            console.log("saving data to local storage");
+            localStorage.setItem("MyName", "Mohammad")
+        }
+        //user press on button - print my name to console log
+        function getData() {
+            console.log("getting data from local storage");
+            let data = localStorage.getItem("MyName")
+            console.log(data);
+        }
+        //user press on button - save selected color to local storage
+function setColor() {
+    localStorage.setItem("color", a1.value) //added id to color input to set item in local storage
+    console.log("selected", a1.value, "changing background color");
+    console.log("color saved to local storage");
+    bb.style.backgroundColor = a1.value
+}
+        //user text box - save to local storage
+        function storeText() {
+            localStorage.setItem("userText", t1.value)
+            console.log("text saved to local storage");
+        }
+        //user press on button - reset all saved data
+
+    </script>
+</body>
+
+</html>

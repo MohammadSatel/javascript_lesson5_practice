@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Clock</title>
+</head>
+
+<body>
+    sec
+    <br>
+    <div style="position: absolute; color: rgb(194, 0, 194); background-color: rgb(92, 173, 208); width: 20px;" id="d1">
+        1</div>
+    <br>
+    min
+    <br>
+    <div style="position: absolute; color: rgb(152, 1, 152); background-color: rgb(69, 133, 160); width: 20px;" id="d2">
+        1</div>
+    <br>
+    hour <div style="position: absolute; color: rgb(80, 0, 80); background-color: rgb(45, 85, 103); width: 20px;"
+        id="d3">1</div>
+
+    <script>
+        let s = 1
+        let m = 1
+        let h = 1
+
+        function timeSec() {
+            if (s < 59) {
+                s = s + 1
+                d1.innerHTML = s
+            }
+            if (s == 59) {
+                s = s * 0
+            }
+        }
+        function timeMin() {
+            if (m < 59) {
+                m = m + 1
+                d2.innerHTML = m
+            }
+            if (m == 59) {
+                m = m * 0
+            }
+        }
+        function timeHour() {
+            if (h < 59) {
+                h = h + 1
+                d3.innerHTML = h
+            }
+            if (h == 59) {
+                h = h * 0
+            }
+        }
+
+        setInterval(timeSec, 1000)
+        setInterval(timeMin, (1000 * 60))
+        setInterval(timeHour, ((1000 * 60) * 60))
+    </script>
+</body>
+
+</html>

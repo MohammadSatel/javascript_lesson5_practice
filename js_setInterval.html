@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval Changing Color</title>
+</head>
+
+<body>
+    <div id="d1" style="background-color: rgb(220, 20, 60);">
+        changing color
+    </div>
+
+    <script>
+        function changeColor1() {
+            d1.style.backgroundColor = "rgb(150, 30, 110"
+        }
+        function changeColor2() {
+            d1.style.backgroundColor = "rgb(210, 130, 150"
+        }
+        setInterval(changeColor1, 1000)
+        setInterval(changeColor2, 1200)
+
+    </script>
+
+</body>
+
+</html>

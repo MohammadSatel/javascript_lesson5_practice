@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Random Place</title>
+</head>
+
+<body>
+    <div id="d1">
+        <button id="b1" onclick="alertUser()"
+            style="background-color: rgb(220, 20, 60); color: rgb(0, 0, 139); position: absolute;">button</button>
+    </div>
+    <script>
+        function placeRandom() {
+            b1.style.left = Math.random() * 250 + "px"
+            b1.style.top = Math.random() * 125 + "px"
+            b1.style.backgroundColor = "rgb(" + Math.random() * 250 + "," + Math.random() * 250 + "," + Math.random() * 250 + ")"
+            b1.style.color = "rgb(" + Math.random() * 250 + "," + Math.random() * 250 + "," + Math.random() * 250 + ")"
+
+        }
+        function alertUser() {
+            console.log("leave this button alone!");
+            alert("stop harrasing this button")
+        }
+        setInterval(placeRandom, 1000)
+
+    </script>
+</body>
+
+</html>
